@@ -4,178 +4,166 @@ sidebar_position: 1
 
 # Terms of Use for Resolvers
 
-**Last updated**: 23rd of September, 2024  
-**Effective from**: 23rd of September, 2024
+**Last updated**: *16th of June, 2025* 
+**Effective from**: *17th of June, 2025*
 
 ---
 
-<b>Welcome to the 1inch Fusion Mode!</b>
+**1inch Network**   
+**Terms of Use for Resolvers**
 
-These Terms of Use and any terms and conditions incorporated herein by reference, including all annexes (collectively, the "1inch Fusion Mode Terms", "Terms") govern the access and/or use of the 1inch Fusion Mode by the Resolvers as defined below ("you", "your").
+*These 1inch Network Terms of Use for Resolvers replace and supersede the previous version titled "1inch Fusion Mode Terms of Use for Resolvers." This revised version extends the scope to include all Resolver activities across the 1inch Network, including the use of 1inch Fusion Mode and Limit Order execution.*
 
-As the 1inch Fusion Mode operates within 1inch Network Interface, please note that the [1inch Network Interface Terms of Use](https://1inch.io/assets/1inch_network_terms_of_use.pdf) and [1inch Network Interface Privacy Policy](https://1inch.io/assets/1inch_network_privacy_policy.pdf) are also applicable to your use of the 1inch Fusion Mode.
+These Terms of Use and any terms and conditions incorporated herein by reference, including all annexes, (collectively, the "**1inch Network Terms for Resolvers**", "**Terms**")  govern the activities and obligations of any individual or entity acting as the Resolver, as defined below ("**you**", "**your**"). The [1inch Network Interface Terms of Use](https://1inch.io/assets/1inch_network_terms_of_use.pdf) and [1inch Network Interface Privacy Policy](https://1inch.io/assets/1inch_network_privacy_policy.pdf) are also applicable to your activities as a Resolver.
 
-Please read these terms carefully. By accessing and/or using the 1inch Fusion Mode, you acknowledge that you have read, understood, and accepted all the terms set out below or incorporated herein by reference. If you do not agree with any provision of these Terms, please do not use the 1inch Fusion Mode.
+Please read these Terms carefully. By registering and/or acting in your capacity as the Resolver, you acknowledge that you have read, understood, and accepted all the provisions set out below or incorporated herein by reference. If you do not agree with any provision of these Terms, you must refrain from acting as a Resolver.
 
 ---
 
 ## 1. Definitions
 
-- <b>Delegate</b>: refers to the st1INCH Token Holder that delegates the Unicorn Power to the Resolver.
-- <b>1inch Escrow Contracts</b>: refers to the smart contracts deployed by 1inch that facilitates securing assets in escrow containers for origin and destination chains (escrow factory contract, source escrow contract, and destination escrow contract) that are used for atomic orders settlement. 1inch Escrow Contracts are the element of the protocol used for cross-chain functionality (1inch Fusion+).
-- <b>1inch Limit Order Contract</b>: refers to the AggregationRouterV6 smart contract or future versions deployed by 1inch and used for limit orders settlement. 1inch Limit Order Contract is an element of the 1inch Limit Order Protocol.
-- <b>1inch Network</b>: refers to the decentralized protocols and products whose synergy enables operations in the DeFi space by offering access to hundreds of liquidity sources across multiple chains.
-- <b>1inch Relayer</b>: refers to the backend service that contains data (e.g. secret hash, token type and amount, target address, timelock specifications) on the Fusion Orders available for filling by the Resolver.
-- <b>1inch Quoter</b>: refers to the backend service that prepares the information to build the Fusion Order’s Dutch auction, visualized as a curve, which determines the amount the Resolver must send to the Maker in each given block.
-- <b>st1INCH Token</b>: refers to the staked governance and utility token of the 1inch Network.
-- <b>Block Builder</b>: refers to a miner (or validator), any individual or legal entity that collects, verifies, and arranges the transaction into a new block to be added to the blockchain.
-- <b>Fusion Order</b>: refers to a gasless swap request submitted by the Maker to be filled by the Resolver that is technically formed as a limit order through 1inch Limit Order Contract and a set of smart contracts that enables onchain interactions.
-- <b>Gas Fee</b>: refers to the total amount of the monetary fee to be paid to fill the Fusion Order (regardless of whether the Fusion Order has been filled or not) which is calculated as the units of gas used (limit) multiplied by the Gas Price: Gas Fee = Gas Units used \* Gas Price.
-- <b>Gas Price</b>: refers to the value for each unit of gas which is determined by the following components:
-  - (a) the "Base Fee" and the "Priority Fee" where the Base Fee is the value calculated by blockchain network consensus algorithm based on the size of the previous block in proportion to the targeted size of the pending block, while the Priority Fee is an additional fee on top of the Base Fee to incentivize the block builders; or
-  - (b) for transactions without Priority Fee - the "Median Gas Price in the Block" that refers to the median value of all gas prices included within the block.
-- <b>Gas Units</b>: refers to the amount of computational resources required to fill the Fusion Order by the Resolver.
-- <b>Maker</b>: refers to anybody who accesses or uses the 1inch Fusion Mode to initiate the Fusion Order without paying the Gas Fee.
-- <b>Resolver</b>, \*\*Taker: refers to any individual or legal entity that fills (partially or fully) the Fusion Order within the 1inch Fusion Mode, including the Whitelisted Resolver, the Permissioned Proxy, and any other Resolver that is contributing in any capacity to fill the Fusion Orders by such Permissioned Proxy.
-- <b>Permissioned Proxy</b>: refers to the Whitelisted Resolver that meets eligibility criteria by uniting the Unicorn Power and fills the Fusion Order by facilitating the collection of data from other Resolvers involved.
-- <b>Whitelisted Resolver</b>: refers to the Resolver that has been registered and whitelisted to fill the Fusion Order.
-- <b>Unicorn Power</b>: refers to the unit that is determined by the ratio of the st1INCH Token and its lock period and enables participation in the 1inch Network governance, including delegation to the Resolvers.
+- **Delegate**: refers to the st1INCH Token Holder that delegates the Unicorn Power to the Resolver.
+- **1inch Escrow Contracts**: refers to the smart contracts deployed by 1inch that facilitates securing assets in escrow containers for origin and destination chains (escrow factory contract, source escrow contract, and destination escrow contract) that are used for atomic intent-based orders settlement. 1inch Escrow Contracts are the element of the protocol used for cross-chain functionality (1inch Fusion+).
+- **1inch Fusion Mode**: refers to a gasless swap feature that is powered by the 1inch Swap Engine (partially based on 1inch Aggregation Router, 1inch Limit Order Protocol) and accommodated by a set of open-source smart contracts.
+- **1inch Limit Order Contract**: refers to the [AggregationRouterV6](https://etherscan.io/address/0x111111125421ca6dc452d289314280a0f8842a65) smart contract (with the exception for zkSync router address) or future versions deployed by 1inch and used for limit orders settlement. 1inch Limit Order Contract is an element of the 1inch Limit Order Protocol.
+- **1inch Relayer**: refers to the backend service that contains data (e.g. secret hash, token type and amount, target address, timelock specifications) on the Fusion Orders available for filling by the Resolver.
+- **1inch Quoter**: refers to the backend service that prepares the information to build the Fusion Order's Dutch auction, visualized as a curve, which determines the amount the Resolver must send to the Maker in each given block.
+- **st1INCH Token**: refers to the staked governance and utility token of the 1inch Network.
+- **Block Builder**: refers to a miner (or validator), any individual or legal entity that collects, verifies, and arranges the transaction into a new block to be added to the blockchain.
+- **Gas Fee**: refers to the total amount of the monetary fee to be paid to fill the Order (regardless of whether the Order has been filled or not)) which is calculated as the units of gas used (limit) multiplied by the Gas Price: Gas Fee = Gas Units used * Gas Price.
+- **Gas Price**: refers to the value for each unit of gas which is determined by the following components: (a) the "Base Fee" and the "Priority Fee" where the Base Fee is the value calculated by blockchain network consensus algorithm based on the size of the previous block in proportion to the targeted size of the pending block, while the Priority Fee is an additional fee on top of the Base Fee to incentivize the block builders; or (b) for transactions without Priority Fee - the "Median Gas Price in the Block" that refers to the median value of all gas prices included within the block.
+- **Gas Units**: refers to the amount of computational resources required to fill the Order by the Resolver.
+- **Maker**: refers to anybody who accesses or uses the 1inch Network Interface to initiate the Order without paying the Gas Fee.
+- **Order**: refers to a gasless swap request submitted by the Maker as an intent-based swap that is technically formed through 1inch Limit Order Contract and a set of smart contracts that enables onchain interactions ("Fusion Order") or limit order ("Limit Order") to be filled by the Resolver.
+- **Resolver**, **Taker**: refers to any individual or legal entity that fills (partially or fully) the Order, including the Whitelisted Resolver, the Permissioned Proxy, and any other Resolver that is contributing in any capacity to fill the Orders by such Permissioned Proxy.
+- **Permissioned Proxy**: refers to the Whitelisted Resolver that meets eligibility criteria by uniting the Unicorn Power and fills the Order by facilitating the collection of data from other Resolvers involved.
+- **Whitelisted Resolver**: refers to the Resolver that has been registered and whitelisted to fill the Order.
+- **Unicorn Power**: refers to the unit that is determined by the ratio of the st1INCH Token and its lock period and enables participation in the 1inch Network governance, including delegation to the Resolvers.
+
+All the terms used in this Section are intended only for the purposes of these Terms. All remaining terms should be interpreted according to the [1inch Network Interface Terms of Use](https://1inch.io/assets/1inch_network_terms_of_use.pdf).
 
 ---
 
-## 2. 1inch Fusion Mode
+## 2. Resolver Access to Order Filling (Execution)
 
-The 1inch Fusion Mode is a gasless swap feature that is powered by the 1inch Swap Engine (partially based on 1inch Aggregation Router, 1inch Limit Order Protocol) and accommodated by a set of open-source smart contracts (the “1inch Fusion Mode”).
+By registering and/or acting as a Resolver, you are granted access to fill (execute) the Fusion Orders and/or the Limit Orders, submitted by the Maker via the 1inch Network Interface.
 
-The 1inch Fusion Mode may include other products and/or features added for the purposes of interface development and improvement, including those for informational, security, or other purposes, which are not intended to affect the main purpose of the 1inch Fusion Mode described above.
+Please note that we only provide you with access to the relevant interface and neither have control over your interactions with the blockchain nor encourage you to perform any. Any interaction performed by you as the Resolver remains your sole responsibility. We do not encourage or solicit any particular use of the smart contracts and disclaims any liability arising from such interactions.
 
-Please note that we only provide you with access to the relevant interface and neither have control over your interactions with the blockchain nor encourage you to perform any. Any interaction performed by you via the 1inch Fusion Mode remains your sole responsibility.
+**Programmatic Costs**. Resolvers expressly acknowledge and agree that the functionality to fill the Fusion Orders and/or the Limit Orders may involve programmatic costs on the protocol level and/or embedded within the underlying smart contracts. These costs may be automatically calculated, applied, and deducted from transaction value flows during the Order filling (execution). All such cost interactions are governed exclusively by the logic and terms of the deployed smart contracts. Costs assessed in this manner are deemed final and non-refundable. By participating, the Resolver expressly and irrevocably acknowledges and accepts that, once processed through the smart contracts, all associated costs are conclusively transferred. Such transfers are immutable and cannot be reversed, canceled, or reclaimed under any circumstances.
+
+The Resolver acknowledges and agrees that costs may fluctuate between different orders and over time, due to factors such as market price volatility, validator behavior changes, and adjustments to auction parameters. We make no representations, warranties, or guarantees concerning the stability, predictability, or consistency of any costs incurred. The Resolvers are solely responsible for assessing, understanding, and monitoring the implications of applicable costs on their strategies and overall performance.
+
+The costs parameters, including, without limitation, to the cost structures, rates, and related mechanisms, may be modified, updated, or deprecated at any time, with or without prior notice. It is the sole responsibility of the The Resolver to remain informed of any such changes by monitoring relevant governance proposals, voting outcomes, and/or protocol-related announcements. We assume no duty to notify Resolvers individually of any cost-related modifications and disclaims any liability arising from a Resolver's failure to remain apprised of such developments.
 
 ---
 
 ## 3. Eligibility
 
-By accessing and/or using the 1inch Fusion Mode, you acknowledge and confirm that you meet all the conditions set forth herein:
+By registering and/or acting as the Resolver, you acknowledge and confirm that you meet all the conditions set forth herein:
 
-- You have the full right, power, and authority to agree to the 1inch Fusion Mode Terms.
-- Your participation in the 1inch Fusion Mode is entirely at your own risk.
-- You are not located in, under the control of, or a national, citizen, or resident of any Prohibited Localities and/or subject to the Sanctions Lists as defined in the 1inch Network Interface Terms of Use.
+- You have the full right, power, and authority to agree to the Terms.
+- You are not located in, under the control of, or a national, citizen, or resident of any Prohibited Localities and/or subject to the Sanctions Lists as defined in the [1inch Network Interface Terms of Use](https://1inch.io/assets/1inch_network_terms_of_use.pdf).
 - You are not impersonating any other person or otherwise concealing your identity.
 - You do not use any software or networking techniques, including the use of a Virtual Private Network (VPN) to modify your internet protocol address or otherwise bypass the restrictions.
-- You are a sophisticated user and possess the necessary knowledge, skills, and experience to use the 1inch Fusion Mode.
-- You comply with all other eligibility requirements set forth in the 1inch Network Interface Terms of Use.
-- You will not use the 1inch Fusion Mode if any applicable laws in your country prohibit you from doing so in accordance with these Terms.
-- You are compliant with all laws and regulations applicable to you and your use or access to the 1inch Fusion Mode.
+- You are a sophisticated user and possess the necessary knowledge, skills, and experience to act as the Resolver. Your activities as the Resolver and/or participation in filling the Orders are entirely at your own risk.
+- You comply with all other eligibility requirements set forth in the [1inch Network Interface Terms of Use](https://1inch.io/assets/1inch_network_terms_of_use.pdf).
+- You will not act as the Resolver if any applicable laws in your country prohibit you from doing so in accordance with these Terms.You are compliant with all laws and regulations applicable to you as the Resolver.
 
-Should we determine that you no longer meet any of these eligibility conditions, we reserve the right, at our sole discretion and upon reasonable notice when required, to suspend or terminate your access and/or use of the 1inch Fusion Mode interface.
-
----
-
-## 4. Whitelisting
-
-### Eligibility Threshold
-
-In order to become the Whitelisted Resolver, you must qualify for the whitelist. The whitelist is dynamically maintained based on the Unicorn Power delegation threshold. To be eligible for the whitelist, you must have received delegations equating to 5% or more of the total Unicorn Power in the network (“Eligibility Threshold”). The whitelist is a maximum limit of ten (10) resolvers.
-
-### Dynamic Whitelist
-
-The dynamic nature of the whitelist means that the Resolver's eligibility may evolve over time due to changes in the Unicorn Power distribution. Should you as the Resolver no longer meet the Unicorn Power delegation threshold, you may be automatically removed from the list of the Whitelisted Resolvers.
-
-From time to time the whitelist criteria and the maximum number of resolvers on the whitelist may be modified, and such changes will be communicated to the Resolvers community in advance.
-
-Please note that inclusion in the whitelist is not guaranteed solely by meeting the Unicorn Power delegation threshold. The Resolver shall ensure full compliance with these Terms, successfully complete the verification and registration process, as described below.
+Should we determine that you no longer meet any of these eligibility conditions, we reserve the right, at our sole discretion and upon reasonable notice when required, to suspend or terminate your status as the Resolver.
 
 ---
 
-## 5. Compliance
+## 4. Compliance
 
-### Verification
+**Verification.** In order to become the Resolver, you must complete the verification procedure. The verification procedure aims to ensure that the Resolvers are safe and compliant actors.
 
-In order to become the Whitelisted Resolver, you must complete the verification procedure accessible at [1inchfoundation.synaps.me](https://1inchfoundation.synaps.me). The verification procedure aims to ensure that the Whitelisted Resolvers are safe and compliant actors.
-
-The verification involves completing an identifying Know Your Client (KYC) / Know Your Business (KYB) questionnaire to verify your identity and determine your legal eligibility. You undertake to promptly provide all required information, including supporting documentation and other evidence, as may be reasonably requested. If you do not provide the required information and/or identifying documents, you will not be able to be whitelisted as the Resolver.
+The verification involves completing an identifying Know Your Client (KYC) / Know Your Business (KYB) questionnaire to verify your identity and determine your legal eligibility. You undertake to promptly provide all required information, including supporting documentation and other evidence, as may be reasonably requested. If you do not provide the required information and/or identifying documents, you will not be able to operate as the Resolver.
 
 Please note that you are solely responsible for the accuracy and completeness of the data provided. If any information and/or identifying documents change, you must inform the 1inch Network representative at [foundation@1inch.io](mailto:foundation@1inch.io) without delay. You may be required to complete the verification process again.
 
 You understand that the amount of information requested to provide as part of the verification procedure may be subject to change over time and that you may at a later point in time be required to provide additional documents and/or information.
 
-The data is collected to comply with applicable anti-money laundering, anti-terrorist financing, fraud prevention, sanctions laws, and regulations. This data is securely maintained and disclosed only when permitted by law. For more information on how your personal data is processed please read the [1inch Network Interface Privacy Policy](https://1inch.io/assets/1inch_network_privacy_policy.pdf).
+The data is collected to comply with applicable anti-money laundering, anti-terrorist financing, fraud prevention, sanctions laws, and regulations. This data is securely maintained and disclosed only when permitted by law. For more information on how your personal data is processed please read [1inch Network Interface Privacy Policy](https://1inch.io/assets/1inch_network_privacy_policy.pdf).
 
-### Wallet Address Screening
+**Wallet Address Screening.** Publicly available information may be used to monitor potential bad actors and assess the risks associated with illicit or non-compliant activities, or other potential threats within the blockchain networks. No additional personal data is collected to perform such compliance assessment. Such risk assessment services may be provided by the third-party providers.
 
-Publicly available information may be used to monitor potential bad actors and assess the risks associated with illicit or non-compliant activities, or other potential threats within the blockchain networks. No additional personal data is collected to perform such compliance assessment. Such risk assessment services may be provided by TRMLabs or other third parties.
-
-### Third-party Providers
-
-Please note that verification procedures and wallet address screening are provided by third-party providers. You acknowledge and understand that the results and outcomes lie in the sole discretion of the third-party provider. We have no control over or connection to the services of any third-party providers, thus we are not and cannot be responsible for the accuracy of the information or the services of such providers. The services of such third-party providers are governed by their respective terms of use, please read them carefully.
+**Third-Party Providers.** Please note that verification procedures and wallet address screening are provided by third-party providers. You acknowledge and understand that the results and outcomes lie in the sole discretion of the third-party provider. We have no control over or connection to the services of any third-party providers, thus we are not and cannot be responsible for the accuracy of the information or the services of such providers. The services of such third-party providers are governed by their respective terms of use, please read them carefully.
 
 ---
 
-## 6. Registration
+## 5. Registration
+
+By registering as the Resolver, you acknowledge, warrant, and agree that:
+
+- You acknowledge and accept full responsibility for your decision to act as the Resolver, including conducting your own assessment of any and all risks associated with filling (execution) of the Orders.
+- You act as the Resolver entirely at your own risk. The 1inch Network Interface, including your access and/or use of the 1inch Fusion Mode, is provided "as is" without any warranties or representations, whether express or implied, regarding the security, reliability, functionality, or continued availability of the underlying code. There is no guarantee that access to the 1inch Network Interface, including your access and/or use of the 1inch Fusion Mode, will be uninterrupted, timely, or secure.
+- Registration as a Resolver or inclusion on the Whitelisted Resolver list does not guarantee access to fulfillment of any Order. Your access may be restricted, delayed, or unavailable at any time and for any reason, without notice.
+- You accept that any fees, costs, or expenses associated with your activities as the Resolverare your responsibility unless otherwise specified.
+- You are responsible for ensuring your activities as the Resolver complies with local laws, regulations, and ordinances in your jurisdiction.
+- You pledge not to engage in activities that could potentially harm, overload, or compromise the infrastructure or integrity of the 1inch Network Interface, including your access and/or use of the 1inch Fusion Mode.
+- You understand that any violation of these Terms may result in your removal from the list of the Resolvers, including termination of the Resolver whitelisting status, without prior notice.
+
+---
+
+## 6. Whitelisting
+
+**Eligibility Threshold.** In order to become the Whitelisted Resolver, you must qualify for the whitelist. The whitelist is dynamically maintained based on the Unicorn Power delegation threshold. To be eligible for the whitelist, you must have received delegations equating to 5% or more of the total Unicorn Power in the network ("Eligibility Threshold"). The whitelist is a maximum limit of ten (10) resolvers.
+
+**Dynamic Whitelist.** The dynamic nature of the whitelist means that the Resolver's eligibility may evolve over time due to changes in the Unicorn Power distribution. Should you as the Resolver no longer meet the Unicorn Power delegation threshold, you may be automatically removed from the list of the Whitelisted Resolvers.
+
+From time to time the whitelist criteria and the maximum number of resolvers on the whitelist may be modified, and such changes will be communicated to the Resolvers community in advance.
 
 To complete the whitelisting process, the Resolver that passed the verification procedure shall undergo registration in the whitelist smart contract deployed by the 1inch Network. Please note that updates to the whitelist smart contract may occur periodically. We will reasonably ensure but have no obligation to communicate any such modifications in advance.
 
-By registering as the Whitelisted Resolver, you acknowledge, warrant, and agree that:
-
-- You are solely responsible for any decision to use the 1inch Fusion Mode, including assessing any and all risks related to any Fusion Order.
-- You participate in the Fusion Order’s Dutch auction entirely at your own risk and there are no representations or warranties as to the code security or ongoing availability of the Fusion Mode or that your access will be uninterrupted, timely, or secure at all times.
-- You accept that any fees, costs, or expenses associated with your use of the 1inch Fusion Mode are your responsibility unless otherwise specified.
-- You are responsible for ensuring your use of the 1inch Fusion Mode complies with local laws, regulations, and ordinances in your jurisdiction.
-- You pledge not to engage in activities that could potentially harm, overload, or compromise the infrastructure or integrity of the 1inch Fusion Mode.
-- You understand that any violation of these Terms may result in your removal from the list of the Whitelisted Resolvers without prior notice.
-
-The Resolver shall ensure full and continuous compliance with these Terms. We reserve the right to remove the Resolver from the whitelist if the Whitelisted Resolver fails to comply with any provision of the 1inch Fusion Mode Terms.
+Please note that inclusion in the whitelist is not guaranteed solely by meeting the Unicorn Power delegation threshold. The Resolver shall ensure full compliance with these Terms, successfully complete the verification and registration process, as described above. We reserve the right to remove the Resolver from the whitelist if the Whitelisted Resolver fails to comply with any provision of the Terms.
 
 ---
 
 ## 7. Permissioned Proxy
 
-The 1inch Fusion Mode allows eligible Resolvers to unite their Unicorn Power to meet the eligibility criteria for registering the Whitelisted Resolver that will act as a permissioned proxy, facilitating collection of data from Resolvers participating in filling the Fusion Order. The Resolver chosen to act as the permissioned proxy shall undergo a whitelisting procedure according to these Terms.
+Eligible Resolvers are able to unite their Unicorn Power to meet the eligibility criteria for registering the Whitelisted Resolver that will act as a permissioned proxy, facilitating collection of data from Resolvers participating in filling the Orders. The Resolver chosen to act as the permissioned proxy shall undergo a whitelisting procedure according to these Terms.
 
-Contributing to filling the Fusion Order by the Permissioned Proxy is subject to compliance with the 1inch Fusion Mode Terms. By registering as the Whitelisted Resolver, the Permissioned Proxy is obliged to ensure that each Resolver contributing in any capacity to fill the Fusion Orders by the Permissioned Proxy complies with these Terms, including the eligibility criteria as set forth in Section 3 of these Terms.
+Contributing to filling the Orders by the Permissioned Proxy is subject to compliance with the Terms. By registering as the Whitelisted Resolver, the Permissioned Proxy is obliged to ensure that each Resolver contributing in any capacity to fill the Orders by the Permissioned Proxy complies with these Terms, including the eligibility criteria as set forth in Section 3 of these Terms.
 
-Should any Resolver involved fail to comply with these Terms, such failure may be deemed as the failure by the Permissioned Proxy to comply with these Terms and may result in the Permissioned Proxy’s removal from the whitelist.
+Should any Resolver involved fail to comply with these Terms, such failure may be deemed as the failure by the Permissioned Proxy to comply with these Terms and may result in the Permissioned Proxy's removal from the whitelist.
 
-The Resolvers acknowledge that their participation in the Permissioned Proxy is subject to arrangements defined by the Resolvers involved. We expressly disclaim any influence, control, or obligation over the decisions, functions and/or results of the Permissioned Proxy’s operations. We assume no liability for collaborative decisions made by the Resolvers within the Permissioned Proxy framework.
+The Resolvers acknowledge that their participation in the Permissioned Proxy is subject to arrangements defined by the Resolvers involved. We expressly disclaim any influence, control, or obligation over the decisions, functions and/or results of the Permissioned Proxy's operations. We assume no liability for collaborative decisions made by the Resolvers within the Permissioned Proxy framework.
 
 ---
 
 ## 8. Use of the 1inch Fusion Mode
 
-This Section outlines specific provisions regarding the Resolver’s interaction with the 1inch Fusion Mode, however, not exhaustive. Other terms related to the use of the 1inch Fusion Mode can be found in the other sections of these Terms. Please ensure that you thoroughly review the entire Terms for comprehensive understanding.
+This Section outlines specific provisions regarding the Resolver's interaction with the 1inch Fusion Mode, however, not exhaustive. Other terms related to the use of the 1inch Fusion Mode can be found in the other sections of these Terms. Please ensure that you thoroughly review the entire Terms for comprehensive understanding.
 
-### Cross-Chain Functionality (1inch Fusion+)
+**The 1inch Fusion Mode.** The 1inch Fusion Mode is a gasless swap feature that is powered by the 1inch Swap Engine (partially based on 1inch Aggregation Router, 1inch Limit Order Protocol) and accommodated by a set of open-source smart contracts. The 1inch Fusion Mode may also incorporate ancillary products or features introduced to support interface development, enhancement, and user experience optimization. These supplementary elements, which may serve informational, security, or other auxiliary purposes, are not intended to modify or alter the primary functionality of the 1inch Fusion Mode as described above.
 
-This subsection describes specific terms with respect to the cross-chain functionality that operates on top of the 1inch’s existing intent-based protocols, facilitated by the 1inch Escrow Contracts, as defined above.
+**Cross-Chain Functionality (1inch Fusion+).** This subsection describes specific terms with respect to the cross-chain functionality that operates on top of the 1inch's existing intent-based protocols, facilitated by the 1inch Escrow Contracts, as defined above.
 
 To initiate a transaction using the cross-chain functionality, the Maker initiates a Fusion Order by signing and issuing the order using the hash of a secret value sent to the 1inch Network, signaling their intent to make a cross-chain swap. Execution of all deposit and withdrawal operations within the cross-chain functionality is performed by the Taker.
 
-Cross-chain functionality also introduces safety deposit mechanics and recovery phase as a precautionary measure. When a Resolver deposits assets into the escrow contract, they must include an additional amount of the native asset of the chain (the “Safety Deposit”). The Safety Deposit is allocated to the executor of any subsequent withdrawal or cancellation transactions.
+Cross-chain functionality also introduces safety deposit mechanics and recovery phase as a precautionary measure. When a Resolver deposits assets into the escrow contract, they must include an additional amount of the native asset of the chain (the "Safety Deposit"). The Safety Deposit is allocated to the executor of any subsequent withdrawal or cancellation transactions.
 
 In cases where assets are withdrawn on the source chain escrow, but canceled on the destination chain escrow, the Resolver must return the Maker's funds on the source chain. This requirement is monitored by the 1inch technical team, as defined below, to additionally notify the Resolvers of the required actions. The Resolver shall perform these actions without any delay. Refusal to do so is subject to the Restriction Measures, as described below.
 
-### Priority Fee Limitations
-
-The 1inch Fusion Mode employs limits on the Priority Fees, including through the predicate (“Fusion Order Predicate”). The following limitations are applicable, irrespective of the use of the Fusion Order Predicate:
+**Priority Fee Limitations.** The 1inch Fusion Mode employs limits on the Priority Fees for the Fusion Orders, including through the predicate ("Fusion Order Predicate"). The following limitations are applicable, irrespective of the use of the Fusion Order Predicate:
 
 - For blocks where the Base Fee is < 10.6 gwei, the Priority Fee is capped at 70% of the Base Fee;
 - For blocks with the Base Fee ranges between 10.6 gwei and 104.1 gwei, the Priority Fee is capped at 50% of the Base Fee;
-- For blocks where the Base Fee is > 104.1 gwei, the Priority Fee is capped at 65% of the Base Fee.
+- For blocks where the Base Fee is >104.1 gwei, the Priority Fee is capped at 65% of the Base Fee.
 
-### Restriction Measures
-
-Any action aimed at circumventing the Priority Fee Limitation, intentionally altering the transaction order within the block, and/or otherwise abusing the Fusion Orders filling process, constitutes a breach of these Terms, including, but not limited to:
+**Restriction Measures.** Any action aimed at circumventing the Priority Fee Limitations, intentionally altering the transaction order within the block, and/or otherwise abusing the Orders filling process, constitutes a breach of these Terms, including, but not limited to:
 
 - Bypassing the Priority Fee Limitations as defined above;
-- Making direct payments to the Block Builder’s coinbase address (i.e. block.coinbase.transfer(amount));
+- Making direct payments to the Block Builder's coinbase address (i.e. block.coinbase.transfer(amount);
 - Deliberate actions to manipulate transaction order within the block; and/or
 - Bundling with non-related transactions.
 
-Given the evolving nature of the 1inch Fusion Mode, this list is not intended to be exhaustive. Any breach identified by the technical team responsible for maintaining the 1inch Fusion Mode (the “1inch technical team”) will be subject to the outlined restriction measures. We reserve the right to determine and address any breach at our sole discretion, enforcing the restrictions accordingly.
+Given the evolving nature of the 1inch Fusion Mode, this list is not intended to be exhaustive. Any breach identified by the technical team responsible for maintaining the 1inch Fusion Mode (the "1inch technical team") will be subject to the outlined restriction measures. We reserve the right to determine and address any breach at our sole discretion, enforcing the restrictions accordingly.
 
-Upon the first breach identified, the Resolver will immediately receive a warning notice sent from the analytics team supporting the 1inch Fusion Mode (the “1inch analytics team”) via the previously provided by the Resolver contacts and other available private means of communication. Subsequent violations shall result in restrictions on processing the Fusion Orders within the 1inch Fusion Mode based on the frequency of such breaches. The restriction measures mean blocking the Resolver from processing the Fusion Orders for the specific period determined by the cumulative count of breaches as of the date of the latest breach identified as follows:
+Upon the first breach identified, the Resolver will immediately receive a warning notice sent from the analytics team supporting the 1inch Fusion Mode (the "1inch analytics team") via the previously provided by the Resolver contacts and other available private means of communication. Subsequent violations shall result in restrictions on processing the Orders within the 1inch Fusion Mode based on the frequency of such breaches. The restriction measures mean blocking the Resolver from processing the Orders for the specific period determined by the cumulative count of breaches as of the date of the latest breach identified as follows:
 
-- Upon a second breach, the Resolver shall be blocked from processing the Fusion Orders for a duration of one (1) day;
+- Upon a second breach, the Resolver shall be blocked from processing the Orders for a duration of one (1) day;
 - Upon a third breach - for a duration of seven (7) days;
 - Upon a fourth breach - for a duration of thirty (30) days;
 - Upon a fifth breach - for a duration of three-hundred sixty-five (365) days.
@@ -186,29 +174,29 @@ We reserve the right to determine the fact, count, and sequence of breaches at o
 
 ---
 
-## 9. The Whitelisted Resolver’s Exit
+## 9. The Resolver's Exit
 
-As the Whitelisted Resolver, you have the right to voluntarily exit from the 1inch Fusion Mode at any time for any reason by contacting us. If you choose to exit, you shall inform the 1inch Network support team at [support@1inch.io](mailto:support@1inch.io) about your intention to exit within fourteen (14) days prior to the intended exit date. If you act as the Permissioned Proxy you are required to notify those Resolvers involved in the Permissioned Proxy about your exit within the same 14-day period.
+As the Resolver, you have the right to voluntarily terminate your status of the Resolver at any time for any reason by contacting us. If you choose to exit, you shall inform the 1inch Network support team at [support@1inch.io](mailto:support@1inch.io) about your intention to exit within fourteen (14) days prior to the intended exit date. If you act as the Permissioned Proxy you are required to notify those Resolvers involved in the Permissioned Proxy about your exit within the same 14-day period.
 
-The exit date is determined as 14 days following the next day of notification to the 1inch Network support team. For instance, if the Whitelisted Resolver informs the 1inch Network support team about the intention to exit on September 1st, the Resolver's Whitelisting status will be revoked on September 15th.
+The exit date is determined as 14 days following the next day of notification to the 1inch Network support team. For instance, if the Resolver informs the 1inch Network support team about the intention to exit on September 1st, the Resolver's Whitelisting status will be revoked on September 15th.
 
-Upon the exit date, the Whitelisted Resolver's functionality within the 1inch Fusion Mode will be disabled, and the Resolver’s whitelisting status will be revoked. Consequently, such Resolver will no longer be considered an active participant within the 1inch Fusion Mode.
+Upon the exit date, the Resolver's functionality will be disabled, and the Resolver's whitelisting status (if applicable) will be revoked. Consequently, such Resolver will no longer be considered active.
 
 ### Incentive Programs (Farms)
 
-In the event of the Whitelisted Resolver’s exit or any other case when the Resolver’s whitelist status is terminated, the Resolver’s commitment within the farm remains binding according to the initially defined timing schedule. Therefore, in case of exiting from the 1inch Fusion Mode or experiencing whitelist status termination, the exiting Resolver shall retain the created incentives in the farm. Such Resolver must ensure that the Delegates who have previously delegated their voting power to that Resolver are able to claim the incentives from the Resolver at any time after such Resolver's exit.
+In the event of the Resolver's exit or any other case when the Resolver's whitelist status is terminated, the Resolver's commitment within the farm remains binding according to the initially defined timing schedule. Therefore, in case of exiting or experiencing whitelist status termination, the exiting Resolver shall retain the created incentives in the farm. Such Resolver must ensure that the Delegates who have previously delegated their voting power to that Resolver are able to claim the incentives from the Resolver at any time after such Resolver's exit.
 
 ### Notification on Non-Active Status
 
-Information about the non-active status of the resolver will be prominently displayed on the 1inch Fusion Mode interface. The Delegates are strongly advised to refrain from using non-active resolvers. Instead, the Delegates are encouraged to consider and interact with the list of active Whitelisted Resolvers. Resolvers should be a pro-active part of such notifications.
+Information about the non-active status of the resolver will be prominently displayed on the list of the Resolvers. The Delegates are strongly advised to refrain from using non-active resolvers. Instead, the Delegates are encouraged to consider and interact with the list of active Whitelisted Resolvers. Resolvers should be a pro-active part of such notifications.
 
 ---
 
 ## 10. Exclusive Resolver API
 
-The Resolver may be exclusively selected to fill the Fusion Order at the beginning of the Fusion Order’s Dutch auction as vetted by 1inch from time to time. In order to benefit from the Exclusive Resolver API functionality, the Resolver shall provide the 1inch technical team with the Resolver’s API endpoint developed in accordance with the Exclusive Resolver API documentation and/or any necessary credentials provided by the 1inch technical team.
+The Resolver may be exclusively selected to fill the Fusion Order at the beginning of the Fusion Order's Dutch auction as vetted by 1inch from time to time. In order to benefit from the Exclusive Resolver API functionality, the Resolver shall provide the 1inch technical team with the Resolver's API endpoint developed in accordance with the Exclusive Resolver API documentation and/or any necessary credentials provided by the 1inch technical team.
 
-The Resolver’s use of the Exclusive Resolver API functionality is subject to the Service Level Agreement detailed in Annex A of these Terms.
+The Resolver's use of the Exclusive Resolver API functionality is subject to the Service Level Agreement detailed in Annex A of these Terms.
 
 The Resolver hereby grants 1inch with a limited, non-exclusive, world-wide, non-sublicensable and non-transferable license to the Resolver's API endpoint solely for the purpose of and to the extent necessary for the use of the Exclusive API Resolver functionality, as set forth herein, if applicable.
 
@@ -222,28 +210,29 @@ From time to time we may introduce various incentive programs designed to incent
 
 ## 12. Disclaimers
 
-By using the 1inch Fusion Mode, you acknowledge and agree that:
+By registering and/or acting as the Resolvers, you acknowledge and agree that:
 
-- Your participation in the 1inch Fusion Mode is undertaken at your own risk. We shall not be held liable for any gains, losses, or damages resulting from your participation, transactions, or activities within the 1inch Fusion Mode.
+- Your activities as the Resolver and/or participation in filling the Orders is undertaken at your own risk. To the fullest extent permitted by applicable law, in no event shall we, or any of our affiliates, officers, directors, employees, agents, or representatives shall not be liable for any indirect, incidental, consequential, special, punitive, or exemplary damages, including, without limitation, any loss of profits, data, business opportunities, or use, arising out of or in any way connected with you acting as the Resolver.
+- You further acknowledge that we disclaim all liability for any gains, losses, or damages incurred in connection with you acting as the Resolver, including execution failures, costs, or any other associated activities.
 - We bear no responsibility for the delegation and/or uniting of the Unicorn Power as part of the activities related to the Permissioned Proxy. The delegation process, as well as any actions taken within the Permissioned Proxy, and their outcomes are solely the responsibility of the parties involved and are undertaken at your own risk.
-- Any benefits or incentives associated with the use of the 1inch Fusion Mode are not guaranteed.
-- Any information or data provided through the 1inch Fusion Mode, including the whitelist, incentive programs, or any other features, do not constitute financial or investment advice. It is your responsibility to conduct independent research and seek professional advice when making decisions.
-- We will not be held liable for any third-party websites, products, or services linked to or utilized through the 1inch Fusion Mode. Any interactions with third-party entities are solely your responsibility, and we shall not be accountable for any outcomes.
-- We cannot guarantee uninterrupted access to the 1inch Fusion Mode, occasional downtime or disruptions may occur. We shall not be held responsible for any resulting inconvenience or losses.
-- We shall not be held liable for the actions taken by Resolvers or other participants within the platform. You are solely responsible for your behavior and interactions within the 1inch Fusion Mode, and we shall not be liable for any consequences thereof.
-- The 1inch Fusion Mode’s functionality and features may evolve over time. We reserve the right to modify, suspend, or discontinue any aspect of the 1inch Fusion Mode at our discretion. Any such changes will be communicated as feasible, and we shall not be held accountable for any inconvenience or disruptions arising from these modifications.
-- The 1inch Fusion Mode Terms may be updated or modified from time to time. It is your responsibility to regularly review the terms and policies and ensure compliance with the most recent version.
-- By participating in the 1inch Fusion Mode, you agree to indemnify and hold harmless the 1inch Network, its affiliates, partners, and representatives from any claims, damages, losses, or liabilities arising from your use of the 1inch Fusion Mode.
+- Any benefits or incentives associated with registering and/or acting as the Resolver are not guaranteed.
+- Any information or data provided through the 1inch Network Interface and/or the 1inch Fusion Mode, including the whitelist, incentive programs, or any other features, do not constitute financial or investment advice. It is your responsibility to conduct independent research and seek professional advice when making decisions.
+- We will not be held liable for any third-party websites, products, or services linked to you acting as the Resolver. Any interactions with third-party entities are solely your responsibility, and we shall not be accountable for any outcomes.
+- We cannot guarantee uninterrupted access to the 1inch Network Interface, including the 1inch Fusion Mode, occasional downtime or disruptions may occur. We shall not be held responsible for any resulting inconvenience or losses.
+- We shall not be held liable for the actions taken by Resolvers. You are solely responsible for your behavior and interactions as the Resolver, and we shall not be liable for any consequences thereof. You irrevocably waive any claims, demands, or recourse in relation to any transactions or activities as the Resolver, including any embedded costs.
+- The 1inch Fusion Mode's functionality and any other features you may have access to as the Resolver may evolve over time. We reserve the right to modify, suspend, or discontinue any aspect of the 1inch Fusion Mode's functionality and any other features you may have access to as the Resolver, including any features, costs, incentives, other functionalities, at our discretion. Any such changes will be communicated as feasible, and we shall not be held accountable for any inconvenience or disruptions arising from these modifications.
+- These Terms may be updated or modified from time to time. It is your responsibility to regularly review the terms and policies and ensure compliance with the most recent version.
+- By acting and/or registering as the Resolvere, you agree to indemnify and hold harmless the 1inch Network, its affiliates, partners, and representatives from any claims, damages, losses, or liabilities arising in connection with you acting as the Resolver.
 
 ---
 
 ## 13. Updates and Notifications
 
-We may periodically update these Terms, including any additional sections or provisions, at any time by posting the revised version of these Terms with an updated revision date. Please regularly check for updates to ensure that you are aware of the most current version of the 1inch Fusion Mode Terms.
+We may periodically update these Terms, including any additional sections or provisions, at any time by posting the revised version of these Terms with an updated revision date. Please regularly check for updates to ensure that you are aware of the most current version of the Terms.
 
-The changes will become effective and shall be deemed accepted by you, the first time you use or access the 1inch Fusion Mode after the initial posting of the revised Terms and shall apply on a going-forward basis with respect to your use of the 1inch Fusion Mode, unless otherwise expressly stated. If you do not agree with any such modification, your sole and exclusive remedy is to terminate your use of the 1inch Fusion Mode.
+The changes shall be deemed accepted by you, the first time you register and/or act as the Resolver after the initial posting of the revised Terms and shall apply on a going-forward basis with respect to your use of the 1inch Fusion Mode, unless otherwise expressly stated. If you do not agree with any such modification, your sole and exclusive remedy is to terminate your status as the Resolver.
 
-Failure to comply with the updated terms may result in the termination of your access to the 1inch Fusion Mode.
+Failure to comply with the updated terms may result in the termination of your status as the Resolver.
 
 ---
 
@@ -253,7 +242,7 @@ Failure to comply with the updated terms may result in the termination of your a
 
 ### SERVICE LEVEL AGREEMENT
 
-This Service Level Agreement ("SLA") shall constitute an integral part of the 1inch Network Fusion Mode Terms of Use for Resolvers ("1inch Fusion Mode Terms", "Terms") and should be read in conjunction with the Terms. All capitalized terms used herein shall have the same meaning as assigned to them in the Terms, unless other expressly stated otherwise.
+This Service Level Agreement ("SLA") shall constitute an integral part of the 1inch Network Terms of Use for Resolvers ("1inch Network Terms of Use for Resolvers", "Terms") and should be read in conjunction with the Terms. All capitalized terms used herein shall have the same meaning as assigned to them in the Terms, unless other expressly stated otherwise.
 
 This SLA applies solely to the Exclusive Resolver API functionality. Please, note that this SLA may be subject to change, and any modifications will be communicated by 1inch in advance, as reasonably possible.
 
@@ -261,13 +250,13 @@ This SLA applies solely to the Exclusive Resolver API functionality. Please, not
 
 ## 1. Exclusive Resolver
 
-1.1. For the purpose of this SLA, "Exclusive Resolver" refers to the Resolver that has provided the Resolver’s API endpoint to be exclusively selected to fill the Fusion Order at the beginning of the Fusion Order’s Dutch auction, as vetted by 1inch from time to time.
+1.1. For the purpose of this SLA, "Exclusive Resolver" refers to the Resolver that has provided the Resolver's API endpoint to be exclusively selected to fill the Fusion Order at the beginning of the Fusion Order's Dutch auction, as vetted by 1inch from time to time.
 
 1.2. The Exclusive Resolver shall be considered vetted provided that:
 
 1. The promoted resolver-worker address of the Resolver is included in the list of the Whitelisted Resolvers;
 2. The allowance field is zero, while other Resolvers have non zero allowance; and
-3. The Fusion Order contains one of initialRateBump provided by the Resolver’s API endpoint. The filled Fusion Order’s Maker amount (makerAmount) must be the same as provided by the Resolver’s API endpoint for the specific rate bump at the beginning of the Fusion Order’s Dutch auction (initialRateBump).
+3. The Fusion Order contains one of initialRateBump provided by the Resolver's API endpoint. The filled Fusion Order's Maker amount (makerAmount) must be the same as provided by the Resolver's API endpoint for the specific rate bump at the beginning of the Fusion Order's Dutch auction (initialRateBump).
 
 ---
 
@@ -296,13 +285,15 @@ This SLA applies solely to the Exclusive Resolver API functionality. Please, not
 
 3.2. Fill Rate. The Exclusive Resolver shall maintain a minimum fill rate of 90% for the Exclusive Orders as calculated on a rolling 7 calendar days period. "Fill Rate" is calculated based on the following formula:
 
-<img src='/static/assets/fill-rate.png' alt="fill rate" />
+```
+Fill Rate = (Number of Filled Exclusive Orders / Total Number of Exclusive Orders Provided) × 100%
+```
 
 ---
 
 ## 4. Performance Monitoring
 
-4.1. The 1inch technical team will conduct continuous performance monitoring of the Exclusive Resolvers’ adherence to the Performance Metrics.
+4.1. The 1inch technical team will conduct continuous performance monitoring of the Exclusive Resolvers' adherence to the Performance Metrics.
 
 4.2. In cases where performance monitoring reveals that the Exclusive Resolver fails to meet the Performance Metrics, the 1inch technical team may enforce the restriction measures as defined below. 1inch reserves the right to determine and address any case of non-compliance at its sole discretion.
 
@@ -312,26 +303,9 @@ This SLA applies solely to the Exclusive Resolver API functionality. Please, not
 
 5.1. In order to ensure smooth and reliable user experience within the 1inch Fusion Mode, any case of non-compliance with the Performance Metrics may be subject to the following restriction measures:
 
-<table border="1" cellpadding="10" cellspacing="0">
-  <thead>
-    <tr>
-      <th><b>Performance Metric</b></th>
-      <th><b>Measurement Period</b></th>
-      <th><b>First Non-Compliance</b></th>
-      <th><b>Second Non-Compliance</b></th>
-      <th><b>Third Non-Compliance</b></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>90% Fill Rate</td>
-      <td>Rolling 7 calendar day period</td>
-      <td>Warning</td>
-      <td>Suspension from using the Exclusive Resolver functionality (7 calendar days)</td>
-      <td>Block from using the Exclusive Resolver functionality (30 calendar days)</td>
-    </tr>
-  </tbody>
-</table>
+| Performance Metric | Measurement Period | First Non-Compliance | Second Non-Compliance | Third Non-Compliance |
+| :---: | :---: | :---: | :---: | :---: |
+| 90% Fill Rate | Rolling 7 calendar day period | Warning | Suspension from using the Exclusive Resolver functionality (7 calendar days) | Block from using the Exclusive Resolver functionality (30 calendar days) |
 
 5.2. The warning will be sent from the 1inch analytics team via the previously provided by the Resolver contacts and other available private means of communication.
 
@@ -346,8 +320,8 @@ This SLA applies solely to the Exclusive Resolver API functionality. Please, not
 6.1. This SLA does not apply to any:
 
 1. Features and functionality that are not explicitly included in this SLA;
-2. Any disruptions or changes in the normal process of operation of the Fusion Mode within 1inch's direct control or by force majeure events beyond 1inch's direct control;
-3. Force majeure events and other issues beyond the Resolver’s direct control that prevent normal operation of the Resolver within the 1inch Fusion Mode, provided that immediate notice is given to 1inch by the Resolver.
+2. Any disruptions or changes in the normal process of operation of the Fusion Mode within 1inch's direct control or by force majeure events beyond the 1inch's direct control;
+3. Force majeure events and other issues beyond the Resolver's direct control that prevent normal operation of the Resolver within the 1inch Fusion Mode, provided that immediate notice is given to 1inch by the Resolver.
 
 ---
 
