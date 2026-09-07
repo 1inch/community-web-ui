@@ -31,12 +31,21 @@
   },
   "pnpm": {
     "overrides": {
+      "brace-expansion@1": "1.1.18",
+      "brace-expansion@2": "2.1.4",
+      "browserslist": "4.28.9",
       "cheerio": "1.0.0-rc.11",
-      "fast-xml-parser": ">=5.7.0",
-      "serialize-javascript": ">=7.0.5",
-      "shell-quote": ">=1.8.4",
-      "uuid": ">=11.1.1",
-      "websocket-driver": ">=0.7.5"
+      "dompurify": "3.4.15",
+      "fast-uri": "3.1.7",
+      "fast-xml-parser": "5.10.1",
+      "js-yaml@4": "4.3.2",
+      "nanoid@3": "3.3.18",
+      "postcss": "8.5.28",
+      "qs": "6.16.0",
+      "serialize-javascript": "7.0.7",
+      "shell-quote": "1.10.0",
+      "uuid": "14.0.1",
+      "websocket-driver": "0.7.5"
     }
   },
   "browserslist": {
