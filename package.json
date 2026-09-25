@@ -38,12 +38,14 @@
       "dompurify": "3.4.15",
       "fast-uri": "3.1.7",
       "fast-xml-parser": "5.10.1",
+      "image-size": "2.0.4",
       "js-yaml@4": "4.3.2",
       "nanoid@3": "3.3.18",
       "postcss": "8.5.28",
       "qs": "6.16.0",
       "serialize-javascript": "7.0.7",
       "shell-quote": "1.10.0",
+      "svgo@3": "3.3.5",
       "uuid": "14.0.1",
       "websocket-driver": "0.7.5"
     }
