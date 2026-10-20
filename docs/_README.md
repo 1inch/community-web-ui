@@ -39,7 +39,7 @@ This command generates static content into the `build` directory and can be serv
 
 ### General info
 
-You can see `warning` in time `pnpm install` - it's okey
+You can see `warning` in time `pnpm install` - it's okay
 
 File `docs\limit-order-protocol\smart-contract\_category_.json` changed after `pnpm install`. Discard changes in this file before execute some other commands
 
